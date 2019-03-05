@@ -9,6 +9,9 @@ export class TemplateformComponent implements OnInit {
 
   fName="Dummy name"
 
+  lName = ""
+
+  hobby = ""
 
   addHobby = function(hf){
     console.log("Hobby captured!" + hf)

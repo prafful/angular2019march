@@ -11,6 +11,10 @@ export class ReactiveformsComponent implements OnInit {
 
   reactiveForm:any
 
+  fName = ""
+  lName = ""
+  hobby = ""
+
   constructor() { }
 
   addHobby = function(hf){

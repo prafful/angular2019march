@@ -1,6 +1,7 @@
 <h3>Simple Task Manager</h3>
 
-Add Task: <input type="text"  autofocus  [(ngModel)]='currentTask'>
+Add Task: 
+<input type="text"  autofocus  [(ngModel)]='currentTask' #inputTask>
 <button (click)="addTask()">Add Task</button>
 <br>
 {{currentTask}}

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'cts-taskmanager',
@@ -9,6 +9,8 @@ export class TaskmanagerComponent implements OnInit {
 
   currentTask=""
 
+  @ViewChild('inputTask') itt:ElementRef 
+
   tasks=[
           "Plan the weekend!",
           "Plan the weekday break!"
@@ -18,12 +20,14 @@ export class TaskmanagerComponent implements OnInit {
     console.log(this.currentTask)
     this.tasks.push(this.currentTask)
     this.currentTask = ""
+    this.itt.nativeElement.focus()
 
   }
 
   changeTaskStatus = function(ct){
     console.log("changing status: " + this.tasks[ct])
     this.tasks.splice(ct,1)
+   
   }
 
   constructor() { }
