@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { RouterModule } from "@angular/router";
+import { HttpClientModule } from "@angular/common/http";
 
 
 
@@ -17,12 +18,16 @@ import { ReactiveformsComponent } from './forms/reactiveforms/reactiveforms.comp
 import { NotfoundComponent } from './notfound/notfound/notfound.component';
 import { ParentformComponent } from './forms/parentform/parentform.component';
 import { TaskmanagerComponent } from './task/taskmanager/taskmanager.component';
+import { LocalServiceComponent } from './consume/local-service/local-service.component';
+import { LocalService2Component } from './consume/local-service2/local-service2.component';
+import { RemoteApiComponent } from './consume/remote-api/remote-api.component';
 
 @NgModule({
             imports: [
                       BrowserModule,
                       FormsModule,
                       ReactiveFormsModule,
+                      HttpClientModule,
                       RouterModule.forRoot([
                         {
                            path:'',
@@ -60,7 +65,18 @@ import { TaskmanagerComponent } from './task/taskmanager/taskmanager.component';
                           path:'task',
                           component:TaskmanagerComponent
                         },
-
+                        {
+                          path:'local',
+                          component:LocalServiceComponent
+                        },
+                        {
+                          path:'local2',
+                          component:LocalService2Component
+                        },
+                        {
+                          path:'remote',
+                          component:RemoteApiComponent
+                        },
                         {
                           path:'**',
                           component:NotfoundComponent
@@ -80,7 +96,10 @@ import { TaskmanagerComponent } from './task/taskmanager/taskmanager.component';
               ReactiveformsComponent,
               NotfoundComponent,
               ParentformComponent,
-              TaskmanagerComponent
+              TaskmanagerComponent,
+              LocalServiceComponent,
+              LocalService2Component,
+              RemoteApiComponent
             ],
              providers: [],
              bootstrap: [AppComponent]
