@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { RestapiService } from 'src/app/services/restapi.service';
+import { Observable } from 'rxjs';
+
+
 
 @Component({
   selector: 'cts-view-user-detail',
@@ -13,6 +16,8 @@ export class ViewUserDetailComponent implements OnInit {
 
   viewSelectedUser:any
 
+
+
   constructor(private active:ActivatedRoute, private rest:RestapiService) { }
 
   ngOnInit() {
@@ -23,7 +28,7 @@ export class ViewUserDetailComponent implements OnInit {
     this.selectedUserId = this.active.snapshot.paramMap.get("myid")
 
     this.rest.getUserData(parseInt(this.selectedUserId)+1).subscribe((user)=>{
-     this.viewSelectedUser = user
+     this.viewSelectedUser = user  
     })
 
 

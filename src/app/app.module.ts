@@ -22,6 +22,9 @@ import { LocalServiceComponent } from './consume/local-service/local-service.com
 import { LocalService2Component } from './consume/local-service2/local-service2.component';
 import { RemoteApiComponent } from './consume/remote-api/remote-api.component';
 import { ViewUserDetailComponent } from './consume/view-user-detail/view-user-detail.component';
+import { LiveSearchPipe } from './custompipe/live-search.pipe';
+import { CustomerComponent } from './bank/customer/customer.component';
+
 
 @NgModule({
             imports: [
@@ -83,6 +86,10 @@ import { ViewUserDetailComponent } from './consume/view-user-detail/view-user-de
                           component:ViewUserDetailComponent
                         },
                         {
+                          path:'bank',
+                          component:CustomerComponent
+                        },
+                        {
                           path:'**',
                           component:NotfoundComponent
                         }
@@ -105,7 +112,10 @@ import { ViewUserDetailComponent } from './consume/view-user-detail/view-user-de
               LocalServiceComponent,
               LocalService2Component,
               RemoteApiComponent,
-              ViewUserDetailComponent
+              ViewUserDetailComponent,
+              LiveSearchPipe,
+              CustomerComponent
+              
             ],
              providers: [],
              bootstrap: [AppComponent]

@@ -1,7 +1,8 @@
 <p>
   remote-api works!
 </p>
-
+Search: <input type="text" [(ngModel)]="searchText"> {{searchText}}
+<br>
 <table border="1">
   <thead>
     <tr>
@@ -13,7 +14,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let user of allUsers; let currentUser = index">
+    <tr *ngFor="let user of allUsers| liveSearch:searchText ; let currentUser = index ">
       <td>{{user.id}}</td>
       <td>{{user.name}}</td>
       <td>{{user.username}}</td>

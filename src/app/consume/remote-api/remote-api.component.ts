@@ -11,6 +11,8 @@ export class RemoteApiComponent implements OnInit {
 
   allUsers:any
 
+  searchText =""
+
   constructor(private rest:RestapiService, private router:Router) { }
 
   ngOnInit() {
