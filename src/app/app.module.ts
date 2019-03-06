@@ -21,6 +21,7 @@ import { TaskmanagerComponent } from './task/taskmanager/taskmanager.component';
 import { LocalServiceComponent } from './consume/local-service/local-service.component';
 import { LocalService2Component } from './consume/local-service2/local-service2.component';
 import { RemoteApiComponent } from './consume/remote-api/remote-api.component';
+import { ViewUserDetailComponent } from './consume/view-user-detail/view-user-detail.component';
 
 @NgModule({
             imports: [
@@ -78,6 +79,10 @@ import { RemoteApiComponent } from './consume/remote-api/remote-api.component';
                           component:RemoteApiComponent
                         },
                         {
+                          path:'viewuser/:myid',
+                          component:ViewUserDetailComponent
+                        },
+                        {
                           path:'**',
                           component:NotfoundComponent
                         }
@@ -99,7 +104,8 @@ import { RemoteApiComponent } from './consume/remote-api/remote-api.component';
               TaskmanagerComponent,
               LocalServiceComponent,
               LocalService2Component,
-              RemoteApiComponent
+              RemoteApiComponent,
+              ViewUserDetailComponent
             ],
              providers: [],
              bootstrap: [AppComponent]

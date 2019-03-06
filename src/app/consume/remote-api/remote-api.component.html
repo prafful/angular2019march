@@ -2,8 +2,24 @@
   remote-api works!
 </p>
 
-<ol>
-  <li *ngFor="let user of allUsers">
-    {{user.email}}
-  </li>
-</ol>
+<table border="1">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Username</th>
+      <th>Email</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of allUsers; let currentUser = index">
+      <td>{{user.id}}</td>
+      <td>{{user.name}}</td>
+      <td>{{user.username}}</td>
+      <td>{{user.email}}</td>
+      <td><button (click)="viewUser(currentUser)">View</button></td>
+
+    </tr>
+  </tbody>
+</table>
