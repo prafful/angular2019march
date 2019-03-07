@@ -22,5 +22,13 @@ export class BankapiService {
 
   }
 
+  getCustomerById(id){
+    return this.http.get("http://localhost:3001/customers/" + id)
+  }
+
+  updateCustomerById(updatedCustomer){
+    return this.http.put("http://localhost:3001/customers/"+updatedCustomer.id, updatedCustomer)
+  }
+
 
 }

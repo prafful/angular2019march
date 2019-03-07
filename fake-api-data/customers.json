@@ -6,6 +6,13 @@
       "status": true,
       "image": "1.jpg",
       "id": 1
+    },
+    {
+      "name": "Biryani Dash Button",
+      "amount": 99,
+      "status": true,
+      "image": "1.jpg",
+      "id": 2
     }
   ]
 }

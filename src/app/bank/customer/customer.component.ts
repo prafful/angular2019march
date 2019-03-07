@@ -10,6 +10,17 @@ export class CustomerComponent implements OnInit {
 
   allCustomers:any
 
+  doTransact = false
+
+  transactCustomer={
+    id:0,
+    name:"",
+    amount:"",
+    status:true,
+    image:"1.jpg"
+  }
+  
+ 
   constructor(private bankapi:BankapiService) { }
 
   ngOnInit() {
@@ -35,5 +46,22 @@ export class CustomerComponent implements OnInit {
       this.bankapi.getCustomers().subscribe(cust => this.allCustomers = cust)
     })
   }
+
+  showTransact = function(id){
+    this.doTransact = true
+    this.bankapi.getCustomerById(id).subscribe(c => {
+      this.transactCustomer = c
+      console.log("Customer Info for transaction")
+      console.log(this.transactCustomer)
+    })
+  }
+
+  customerTransactionDone = function(e){
+    this.doTransact = !this.doTransact
+    this.bankapi.updateCustomerById(e).subscribe(c => {
+      this.bankapi.getCustomers().subscribe(cust => this.allCustomers = cust)
+    })
+  }
+
 
 }

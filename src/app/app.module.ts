@@ -26,6 +26,8 @@ import { LiveSearchPipe } from './custompipe/live-search.pipe';
 import { CustomerComponent } from './bank/customer/customer.component';
 import { ParentComponent } from './eventbinding/parent/parent.component';
 import { ChildComponent } from './eventbinding/child/child.component';
+import { ClsComponent } from './cls/cls.component';
+import { TransactComponent } from './bank/transact/transact.component';
 
 
 @NgModule({
@@ -122,7 +124,9 @@ import { ChildComponent } from './eventbinding/child/child.component';
               LiveSearchPipe,
               CustomerComponent,
               ParentComponent,
-              ChildComponent
+              ChildComponent,
+              ClsComponent,
+              TransactComponent
               
             ],
              providers: [],

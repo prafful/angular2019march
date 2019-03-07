@@ -1,0 +1,22 @@
+<form #transactForm="ngForm" (ngSubmit)="doTransaction(transactForm.value)">
+
+    Name: <input type="text" name="name" [(ngModel)]="transactCustomer.name" readonly>
+    &nbsp;
+    Balance: <input type="number" name="balance" [(ngModel)]="transactCustomer.amount" readonly>
+    &nbsp;
+    Amount: <input type="number" name="amount" [(ngModel)]="transactAmount" >
+ 
+    <br>
+    <input type="radio" name="transactionType" value="credit" [(ngModel)]="ttCredit">Crebit
+    &nbsp;
+    <input type="radio" name="transactionType" value="debit" [(ngModel)]="ttDebit">Debit
+ 
+    <br>
+    <button type="submit">Transact</button>
+    <br>
+    {{ttDebit}}
+    <br>
+    {{ttCredit}}
+
+
+</form>
