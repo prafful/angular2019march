@@ -2,19 +2,23 @@
   "name": "angular-example004",
   "version": "0.0.0",
   "scripts": {
+   
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "json-server1": "json-server ./fake-api-data/users.json",
+    "json-server2": "json-server ./fake-api-data/customers.json",
+    "install-server":"npm i -g json-server"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "~7.1.0",
     "@angular/common": "~7.1.0",
     "@angular/compiler": "~7.1.0",
-    "@angular/core": "^7.1.0",
+    "@angular/core": "^7.2.8",
     "@angular/forms": "~7.1.0",
     "@angular/platform-browser": "~7.1.0",
     "@angular/platform-browser-dynamic": "~7.1.0",
@@ -44,6 +48,7 @@
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
-    "typescript": "~3.1.6"
+    "typescript": "~3.1.6",
+    "json-server": "~0.14.0"
   }
 }
