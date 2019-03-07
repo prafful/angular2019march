@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { RouterModule } from "@angular/router";
 import { HttpClientModule } from "@angular/common/http";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 
 
@@ -28,6 +29,7 @@ import { ParentComponent } from './eventbinding/parent/parent.component';
 import { ChildComponent } from './eventbinding/child/child.component';
 import { ClsComponent } from './cls/cls.component';
 import { TransactComponent } from './bank/transact/transact.component';
+import { AnimateTextComponent } from './animation/animate-text/animate-text.component';
 
 
 @NgModule({
@@ -36,6 +38,7 @@ import { TransactComponent } from './bank/transact/transact.component';
                       FormsModule,
                       ReactiveFormsModule,
                       HttpClientModule,
+                      BrowserAnimationsModule,
                       RouterModule.forRoot([
                         {
                            path:'',
@@ -98,6 +101,10 @@ import { TransactComponent } from './bank/transact/transact.component';
                           component:ParentComponent
                         },
                         {
+                          path:'animation',
+                          component:AnimateTextComponent
+                        },
+                        {
                           path:'**',
                           component:NotfoundComponent
                         }
@@ -126,7 +133,8 @@ import { TransactComponent } from './bank/transact/transact.component';
               ParentComponent,
               ChildComponent,
               ClsComponent,
-              TransactComponent
+              TransactComponent,
+              AnimateTextComponent
               
             ],
              providers: [],
