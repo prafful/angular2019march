@@ -12,4 +12,8 @@ export class SonComponent implements OnInit {
   ngOnInit() {
   }
 
+  helloFromGuest = function(){
+    console.log("hello from random guest")
+  }
+
 }
